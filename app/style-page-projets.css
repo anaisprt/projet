@@ -1,0 +1,89 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* Reset simple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typographie et mise en page */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #f7f7f7;
+  color: black;
+  line-height: 1.6;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  position: relative;
+}
+
+/* Header */
+header {
+  background-color: white;
+  border-bottom: 1px solid;
+  padding: 10px 0;
+}
+
+header h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Style des pages de projets */
+
+.section-img-projet {
+  display: flex;
+  overflow-x: auto;
+  height: 70vh;
+  padding: 20px 0 20px 0;     /* évite débordement à gauche */
+  gap: 20px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; 
+  box-sizing: border-box;
+  margin:20px;
+  
+}
+
+.img-page-projet {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  min-width: 300px; 
+  flex-shrink: 0; /* empêche de rétrécir */
+  scroll-snap-align: start;
+}
+
+.description-projet {
+  width: 100%;
+  background-color: lightgrey;
+  padding: 10px;
+  overflow-y: scroll;
+  min-height: calc(var(--height) + 20px);
+}
+
+.description-projet > p {
+  padding: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1em;
+  color: black;
+}
